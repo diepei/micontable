@@ -55,3 +55,7 @@ El repositorio incluye un CSV ficticio de Ibercaja en [`public/ejemplo-ibercaja.
 ## Conexiones bancarias futuras
 
 Una conexión bancaria real requeriría un proveedor AISP autorizado con cobertura de Ibercaja, OAuth/SCA, almacenamiento cifrado de tokens en servidor y revisión legal PSD2/RGPD. MiBalance no solicita credenciales bancarias ni utiliza scraping.
+
+## Licencia
+
+Este proyecto se distribuye bajo la [licencia MIT](LICENSE).
