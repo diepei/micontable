@@ -1,6 +1,6 @@
-# EuroAEuro
+# MiBalance
 
-![EuroAEuro — Entiende dónde va cada euro](public/og.png)
+![MiBalance — Tus finanzas, en equilibrio](public/og.png)
 
 Una aplicación web local-first para importar y clasificar automáticamente tus movimientos de Ibercaja. Obtén un resumen anual de tus gastos para descubrir dónde gastas más, identificar tus mayores gastos y conocer cuáles son recurrentes, acompañado de un resumen de IA sobre tu actividad financiera anual.
 
@@ -54,4 +54,4 @@ El repositorio incluye un CSV ficticio de Ibercaja en [`public/ejemplo-ibercaja.
 
 ## Conexiones bancarias futuras
 
-Una conexión bancaria real requeriría un proveedor AISP autorizado con cobertura de Ibercaja, OAuth/SCA, almacenamiento cifrado de tokens en servidor y revisión legal PSD2/RGPD. EuroAEuro no solicita credenciales bancarias ni utiliza scraping.
+Una conexión bancaria real requeriría un proveedor AISP autorizado con cobertura de Ibercaja, OAuth/SCA, almacenamiento cifrado de tokens en servidor y revisión legal PSD2/RGPD. MiBalance no solicita credenciales bancarias ni utiliza scraping.
