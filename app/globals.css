@@ -18,3 +18,44 @@ main{margin-left:232px;min-height:100vh}.page{max-width:1440px;margin:auto;paddi
 @media(max-width:480px){.header-inner{display:block}.app-header .brand{margin:0 auto 8px}.app-header nav{width:100%}.app-header nav button{flex:1}.app-header nav button:nth-child(3){flex:1.5}}
 .recurring{max-height:210px;margin-top:12px;padding-right:5px;overflow-y:auto;scrollbar-gutter:stable}.recurring::-webkit-scrollbar{width:5px}.recurring::-webkit-scrollbar-thumb{background:#d2d2d7;border-radius:9px}.recurring>button{height:42px;padding:6px 2px}
 .privacy-hero{grid-column:auto}
+
+/* Mobile-first polish inspired by native iOS finance apps. */
+.brand b{display:none}.app-header nav i,.nav-mobile-label,.movement-cards{display:none}
+@media(max-width:720px){
+  :root{--shadow:0 1px 2px rgba(0,0,0,.02),0 8px 28px rgba(0,0,0,.035)}
+  html{scroll-padding-bottom:100px}
+  body{font-size:16px;padding-bottom:calc(78px + env(safe-area-inset-bottom));overscroll-behavior-y:none}
+  button,input,select{min-height:44px;-webkit-tap-highlight-color:transparent}
+  .app-shell{min-height:100dvh}
+  .app-header{height:56px;padding-top:env(safe-area-inset-top);background:rgba(245,245,247,.88);border-bottom-color:rgba(0,0,0,.06)}
+  .header-inner{height:56px;padding:0 20px;align-items:center}
+  .app-header .brand{width:auto;height:44px;margin:0;background:transparent;color:var(--ink);display:flex;gap:9px;align-items:center}
+  .app-header .brand:hover{background:transparent;transform:none}
+  .app-header .brand span{width:30px;height:30px;border-radius:9px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:19px}
+  .app-header .brand b{display:block;font-size:17px;letter-spacing:-.35px}
+  .app-header nav{position:fixed;left:0;right:0;bottom:0;z-index:50;height:calc(64px + env(safe-area-inset-bottom));padding:6px 8px env(safe-area-inset-bottom);border-radius:0;border-top:1px solid rgba(0,0,0,.08);background:rgba(250,250,252,.9);box-shadow:0 -8px 30px rgba(0,0,0,.05);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);overflow:visible}
+  .app-header nav button{min-width:0;height:56px;padding:5px 2px;flex:1!important;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;border-radius:12px;font-size:10px}
+  .app-header nav .active{background:transparent;box-shadow:none;color:var(--blue)}
+  .app-header nav i{display:block;height:24px;font:600 24px/24px -apple-system,BlinkMacSystemFont,sans-serif;font-style:normal}
+  .nav-desktop-label{display:none}.nav-mobile-label{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+  .page{padding:26px 16px 32px}
+  .page-title{margin-bottom:22px;align-items:flex-start}.page-title h1{font-size:32px;line-height:1.05;letter-spacing:-1.35px}.page-title>div>p:last-child:not(.eyebrow){display:block;margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.4}
+  .year-picker{font-size:0;gap:0}.year-picker select{font-size:15px;padding:0 34px 0 14px;border:0;border-radius:999px;background:var(--surface)}
+  .card,.metric{border-color:rgba(0,0,0,.055);border-radius:22px}
+  .metrics{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px 12px;padding:0 16px 4px;scrollbar-width:none}.metrics::-webkit-scrollbar{display:none}.metric{min-width:78vw;padding:20px;scroll-snap-align:start;display:block}.metric strong{font-size:30px;text-align:left}.metric p{font-size:13px;margin-bottom:20px}.metric small{font-size:11px}
+  .dashboard-grid>.card{padding:20px;margin-bottom:11px}.card-head h2,.card h2{font-size:18px}.card-head p,.card>p{font-size:13px}.card-head button{min-height:36px;padding:7px 12px;font-size:12px}
+  .legend{margin:14px 0 0;font-size:10px}.bar-chart{margin-left:-8px;margin-right:-8px;padding:0;scroll-snap-type:x proximity}.bar-group{min-width:48px;scroll-snap-align:start}.bar-group small{font-size:10px}
+  .category-list button,.merchant-list li>button,.recurring>button{min-height:52px;font-size:13px}.category-list b,.category-list strong,.recurring b,.recurring strong{font-size:13px}.category-list small,.recurring small{font-size:10px}.merchant-list,.recurring{max-height:none}
+  .insight div>p:not(.eyebrow){font-size:14px;line-height:1.55}.insight small{display:block;font-size:10px;line-height:1.45}.savings-rate>strong{font-size:42px}
+  .primary,.secondary{min-height:44px;padding:11px 17px;font-size:13px;display:inline-flex;align-items:center;justify-content:center}
+  .toolbar{display:flex;gap:9px;margin:0 -16px 12px;padding:0 16px 4px;background:transparent;border:0;box-shadow:none;border-radius:0;overflow-x:auto;scrollbar-width:none}.toolbar::-webkit-scrollbar{display:none}.toolbar .search{min-width:calc(100vw - 32px);flex:0 0 auto;padding-left:14px;background:var(--surface);border:1px solid var(--line)}.toolbar .search input{font-size:16px}.toolbar select{width:auto;flex:0 0 auto;padding:0 34px 0 14px;background:var(--surface);border:1px solid var(--line);font-size:13px}
+  .table-card{background:transparent;border:0;box-shadow:none;overflow:visible}.table-summary{padding:10px 2px;border:0;font-size:12px}.table-scroll{display:none}.movement-cards{display:grid;gap:10px}.movement-card{position:relative;padding:12px 12px 10px;background:var(--surface);border:1px solid rgba(0,0,0,.055);border-radius:20px;box-shadow:var(--shadow)}.movement-card-main{width:100%;min-height:52px;padding:0 0 10px 29px;border:0;background:none;display:flex;align-items:center;gap:11px;text-align:left;color:var(--ink)}.movement-check{position:absolute;left:13px;top:27px;z-index:2}.movement-check input{width:18px;height:18px;min-height:0;accent-color:var(--blue)}.movement-icon{width:40px;height:40px;flex:0 0 auto;border-radius:13px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-weight:700}.movement-copy{min-width:0;flex:1}.movement-copy b,.movement-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.movement-copy b{font-size:14px}.movement-copy small{margin-top:4px;color:var(--muted);font-size:11px}.movement-card-main strong{font-size:13px;white-space:nowrap}.movement-card>.category-pill{width:calc(100% - 29px);margin-left:29px;border:0;background:var(--soft);font-size:12px;padding:0 12px}
+  .bulk{top:66px;min-height:54px;margin-bottom:10px;border-radius:16px;font-size:12px}.bulk select{max-width:46%;min-height:38px}.bulk button{min-height:38px}
+  .modal-backdrop{display:flex;align-items:flex-end}.drawer{position:relative;width:100%;height:auto;max-height:88dvh;padding:26px 20px calc(24px + env(safe-area-inset-bottom));border-radius:26px 26px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.16)}.drawer::before{content:"";display:block;width:36px;height:5px;margin:-14px auto 18px;border-radius:99px;background:#d2d2d7}.drawer h2{font-size:25px}.drawer dl div{font-size:13px}.drawer label,.reason{font-size:12px}
+  .import-card,.security,.preview,.rules-grid>.card,.privacy-grid>.card{padding:20px}.dropzone{height:150px;margin:17px 0}.dropzone b{padding:0 14px;text-align:center}.import-options{gap:12px}.import-options label{font-size:12px}.import-options select{width:100%}.check{min-height:44px}.step h2{font-size:17px}.step p{font-size:12px}.security p,.security ul{font-size:12px}.preview .step .primary{width:100%;margin:8px 0 0}
+  .rules-grid{gap:11px}.rules-grid>article>p,.rules-grid>article>small{font-size:12px;line-height:1.45}.rules-grid input,.rules-grid select{font-size:16px}.rule-list>div:not(.card-head){min-height:58px;flex-wrap:wrap;gap:4px;font-size:12px}.rule-list>div>span{flex-basis:58%}.rule-list>div>strong{font-size:11px}.rule-list>div>button{min-height:36px;font-size:12px}.rule-edit input,.rule-edit select{width:100%;flex-basis:100%}
+  .setting{display:block}.setting p{font-size:12px;line-height:1.5}.danger button{width:100%;margin-top:18px}.toast{bottom:calc(78px + env(safe-area-inset-bottom));font-size:12px;text-align:center}
+}
+@media(max-width:390px){
+  .page-title{display:block}.page-title .year-picker,.page-title>.primary{margin-top:14px}.metric{min-width:84vw}.app-header nav button{font-size:9px}.app-header nav i{font-size:22px}.movement-icon{display:none}.movement-card-main{padding-left:29px}.page-title h1{font-size:30px}
+}
